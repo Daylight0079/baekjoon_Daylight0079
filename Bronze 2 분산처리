@@ -1,0 +1,22 @@
+n = int(input())
+
+data_list = []
+
+for i in range(n):
+    a, b = map(int, input().split())
+    a %= 10
+
+    if a == 0:
+        data_list.append(10)
+    elif a in [1, 5, 6]:
+        data_list.append(a)
+    elif a in [4, 9]:
+        if b % 2 == 0:
+            data_list.append((a * a) % 10)
+        else:
+            data_list.append(a)
+    else:
+        data_list.append((a ** b) % 10)
+
+for i in data_list:
+    print(i)

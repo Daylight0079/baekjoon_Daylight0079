@@ -1,0 +1,8 @@
+n = int(input())
+
+su_list = []
+
+while(n > 0):
+    su_list.append(n % 2)
+    n //= 2
+print(sum(su_list))
